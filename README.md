@@ -3,4 +3,4 @@
 
 
 ## Screenshots
-![ScreenShot1](https://github.com/lees569/Homework1/blob/master/logo.png?raw=true) 
+![ScreenShot1](https://github.com/lees569/SlotWatch/blob/master/main.png) 
