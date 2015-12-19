@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="9531" systemVersion="15C50" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="AgC-eL-Hgc">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="9515"/>
+    </dependencies>
+    <scenes>
+        <!--Interface Controller-->
+        <scene sceneID="aou-V4-d1y">
+            <objects>
+                <controller id="AgC-eL-Hgc" customClass="InterfaceController" customModule="SlotWatch_WatchKit_App" customModuleProvider="target">
+                    <items>
+                        <group width="1" alignment="left" id="QUn-xN-Pqa">
+                            <items>
+                                <imageView width="44" height="20" alignment="center" image="slot-J-down.png" id="m2V-UT-lCs"/>
+                                <imageView width="44" height="20" alignment="center" image="slot-J-down.png" id="kZL-Ld-fKG"/>
+                                <imageView width="44" height="20" alignment="center" image="slot-J-down.png" id="2l7-dm-N08"/>
+                            </items>
+                        </group>
+                        <group width="1" alignment="left" id="N4t-Am-S5b">
+                            <items>
+                                <imageView width="44" height="20" alignment="center" image="slot-7-up.png" id="lUJ-wm-TDO"/>
+                                <imageView width="44" height="20" alignment="center" image="slot-7-up.png" id="e91-9e-2Ao"/>
+                                <imageView width="44" height="20" alignment="center" image="slot-7-up.png" id="uzk-l8-rK4"/>
+                            </items>
+                        </group>
+                        <group width="1" alignment="left" id="rlI-he-PBp">
+                            <items>
+                                <imageView width="44" height="20" alignment="center" image="slot-A-down.png" id="JA9-SZ-0hd"/>
+                                <imageView width="44" height="20" alignment="center" image="slot-A-down.png" id="OMK-4d-DJi"/>
+                                <imageView width="44" height="20" alignment="center" image="slot-A-down.png" id="Es3-07-lgy"/>
+                            </items>
+                        </group>
+                        <group width="1" alignment="left" id="0So-C2-otU">
+                            <items>
+                                <imageView width="44" height="20" alignment="center" image="slot-K-up.png" id="bU0-sD-zDW"/>
+                                <imageView width="44" height="20" alignment="center" image="slot-K-up.png" id="WOw-ec-eK5"/>
+                                <imageView width="44" height="20" alignment="center" image="slot-K-up.png" id="zZG-Se-fuB"/>
+                            </items>
+                        </group>
+                        <button width="1" alignment="left" title="SPIN!" id="q26-RL-Z04">
+                            <color key="titleColor" red="0.50196081400000003" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            <color key="backgroundColor" red="0.31450089419999999" green="1" blue="0.66909233040000005" alpha="1" colorSpace="calibratedRGB"/>
+                            <fontDescription key="font" type="system" pointSize="20"/>
+                            <connections>
+                                <action selector="SpinNow:" destination="AgC-eL-Hgc" id="yeS-XI-qUa"/>
+                            </connections>
+                        </button>
+                        <group width="1" alignment="left" id="cNr-QB-7zN">
+                            <items>
+                                <imageView width="30" height="30" alignment="left" image="coin.png" id="TaO-zr-Lkh"/>
+                                <label alignment="left" verticalAlignment="center" text="100" id="yBI-2l-95l"/>
+                            </items>
+                        </group>
+                    </items>
+                    <connections>
+                        <outlet property="scoreLabel" destination="yBI-2l-95l" id="dNc-Ma-6l4"/>
+                        <outlet property="slotLeft1" destination="m2V-UT-lCs" id="AlH-yz-E5j"/>
+                        <outlet property="slotLeft2" destination="lUJ-wm-TDO" id="JSO-S5-nLJ"/>
+                        <outlet property="slotLeft3" destination="JA9-SZ-0hd" id="z8X-oX-jm3"/>
+                        <outlet property="slotLeft4" destination="bU0-sD-zDW" id="L5b-iR-bvD"/>
+                        <outlet property="slotMiddle1" destination="kZL-Ld-fKG" id="Wzv-RQ-0OA"/>
+                        <outlet property="slotMiddle2" destination="e91-9e-2Ao" id="yEN-Qv-28N"/>
+                        <outlet property="slotMiddle3" destination="OMK-4d-DJi" id="31I-qq-OU6"/>
+                        <outlet property="slotMiddle4" destination="WOw-ec-eK5" id="djo-a8-U54"/>
+                        <outlet property="slotRight1" destination="2l7-dm-N08" id="dIi-Qk-qdt"/>
+                        <outlet property="slotRight2" destination="uzk-l8-rK4" id="bxP-cy-gCp"/>
+                        <outlet property="slotRight3" destination="Es3-07-lgy" id="SKg-2r-XQu"/>
+                        <outlet property="slotRight4" destination="zZG-Se-fuB" id="ySU-GT-RaC"/>
+                        <outlet property="spinButton" destination="q26-RL-Z04" id="He7-ZH-B8C"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="220" y="345"/>
+        </scene>
+        <!--Static Notification Interface Controller-->
+        <scene sceneID="AEw-b0-oYE">
+            <objects>
+                <notificationController id="YCC-NB-fut">
+                    <items>
+                        <label alignment="left" text="Alert Label" id="IdU-wH-bcW"/>
+                    </items>
+                    <notificationCategory key="notificationCategory" identifier="myCategory" id="JfB-70-Muf"/>
+                    <connections>
+                        <outlet property="notificationAlertLabel" destination="IdU-wH-bcW" id="JKC-fr-R95"/>
+                        <segue destination="4sK-HA-Art" kind="relationship" relationship="dynamicNotificationInterface" id="kXh-Jw-8B1"/>
+                    </connections>
+                </notificationController>
+            </objects>
+            <point key="canvasLocation" x="220" y="643"/>
+        </scene>
+        <!--Notification Controller-->
+        <scene sceneID="ZPc-GJ-vnh">
+            <objects>
+                <controller id="4sK-HA-Art" customClass="NotificationController" customModule="SlotWatch_WatchKit_App" customModuleProvider="target"/>
+            </objects>
+            <point key="canvasLocation" x="468" y="643"/>
+        </scene>
+    </scenes>
+</document>
